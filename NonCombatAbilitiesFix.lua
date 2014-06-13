@@ -185,9 +185,9 @@ function NonCombatAbilitiesFix:ShowTab()
 		return (aData.strName or aData.strName) < (bData.strName or bData.strName)
 	end
 
-	self.wndEntryContainer:ArrangeChildrenVert(0, SortFunction(a,b))
-	self.wndEntryContainerMounts:ArrangeChildrenVert(0, SortFunction(a,b))
-	self.wndEntryContainerMisc:ArrangeChildrenVert(0, SortFunction(a,b))
+	self.wndEntryContainer:ArrangeChildrenVert(0, SortFunction)
+	self.wndEntryContainerMounts:ArrangeChildrenVert(0, SortFunction)
+	self.wndEntryContainerMisc:ArrangeChildrenVert(0, SortFunction)
 	self.wndEntryContainer:SetText(#self.wndEntryContainer:GetChildren() == 0 and Apollo.GetString("NCSpellbook_NoResultsAvailable") or "")
 	self.wndEntryContainerMounts:SetText(#self.wndEntryContainerMounts:GetChildren() == 0 and Apollo.GetString("NCSpellbook_NoResultsAvailable") or "")
 	self.wndEntryContainerMisc:SetText(#self.wndEntryContainerMisc:GetChildren() == 0 and Apollo.GetString("NCSpellbook_NoResultsAvailable") or "")
